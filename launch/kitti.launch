@@ -1,0 +1,11 @@
+<launch>
+	<node pkg="kitti_tutorial" type="kitti_data.py" name="kitti_cam">
+
+	<rosparam file="$(find kitti_tutorial)/config/kitti.yaml" command="load"/>
+	
+	</node>
+	<node pkg="rviz" type="rviz" name="rviz" args="-d $(find kitti_tutorial)/config/kitti_rviz.rviz"/>
+
+
+
+</launch>
